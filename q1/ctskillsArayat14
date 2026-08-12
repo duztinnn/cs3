@@ -37,3 +37,58 @@ Step 3: Define Computational Thinking Approaches
 
 
 Step 4: 
+
+BEGIN
+
+DEFINE CLASS MenuItem
+    ATTRIBUTES:
+        name
+        price
+        isAvailable
+    
+    METHODS:
+        display(name, price, status)
+        updateAvailability(status)
+END CLASS
+
+menuList = [
+    MenuItem("Burger", 120.00, true),
+    MenuItem("Fries", 60.00, true),
+    MenuItem("Iced Tea", 45.00, false),
+    MenuItem("Chicken", 150.00, true)
+]
+
+FUNCTION showMenuBoard(menuList)
+    PRINT "====== DIGITAL MENU BOARD ======"
+    FOR EACH item IN menuList DO
+        IF item.isAvailable == true THEN
+            status = "Available"
+        ELSE
+            status = "Sold Out"
+        END IF
+        PRINT item.name + " | Php " + item.price + " | " + status
+    END FOR
+END FUNCTION
+
+FUNCTION placeOrder(menuList, itemName)
+    FOR EACH item IN menuList DO
+        IF item.name == itemName THEN
+            IF item.isAvailable == true THEN
+                PRINT "Order confirmed: " + item.name + " - Php " + item.price
+                RETURN true
+            ELSE
+                PRINT "Sorry, " + item.name + " is currently Sold Out"
+                RETURN false
+            END IF
+        END IF
+    END FOR
+    PRINT "Item not found on the menu"
+    RETURN false
+END FUNCTION
+
+CALL showMenuBoard(menuList)
+
+userChoice = INPUT "Enter the name of the item you want to order: "
+CALL placeOrder(menuList, userChoice)
+
+END
