@@ -27,4 +27,13 @@ Please list possible sub-problems:
 3. Lack of real-time inventory tracker in case of shortages.
 
 
-Step 3: Define Computational Thinking Approaches
+Step 3: Define Computational Thinking Approaches 
+  
+| Sub-Problem | CT Skills | Example Solution |
+| :--- | :--- | :--- |
+| 1. Ordering delays | Abstraction | Create a digital menu board and only include the item's name, price, and availability. |
+| 2. Manual Payment | Algorithmic Thinking | Implement a Point-of-Sale system where the cashier clicks item buttons and the system automatically calculates the total and the required change. |
+| 3. Lack of Inventory Tracking. | Pattern Recognition | Develop a digital inventory system that automatically subtracts items upon sale and alerts staff when item stocks are running low |
+
+
+Step 4: 
