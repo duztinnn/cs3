@@ -13,8 +13,18 @@ Score _______
 Date: August 12, 2026
 
 Step 1: Identify the Big Problem
+
 Main Problem: The PSHS school canteen experiences long lines and slow service during busy lunch hours. This happens because of inefficient ordering, manual payment processes, and the absence of real-time inventory tracking.
+
 
 Step 2: Identify three to four Sub-Problems
 Please list possible sub-problems:
-1. Slow decision-making
+
+1. Students take too long to decide what to order.
+
+2. Cashiers spend too much time calculating order totals and counting change.
+
+3. Lack of real-time inventory tracker in case of shortages.
+
+
+Step 3: Define Computational Thinking Approaches
