@@ -1,0 +1,31 @@
+Annex C
+Code Quality Assessment Worksheet
+
+Section: 9 - Arayat 		Score:
+
+C# / Name: #14 / Duztin Sotto 		Date: 08/16/26
+Groupmates: Hyrall Sevilla, Aaron Tapao
+
+1. Efficiency
+Which algorithm is faster when the list of numbers is very large? Why?
+- PseudoCode 1 is faster when the list of numbers is large since it uses only one loop, unlike PseudoCode 2 which uses 2 nested loops.
+
+2. Readability
+Which algorithm is easier to understand at first glance? What makes it clearer?
+- PseudoCode 1 is easier to understand at first glance, because it's concise, it has clear variable names, and no unnecessary lines.
+
+3. Maintainability
+If you had to add a new feature (like finding both max and min), which algorithm would be easier to update? Why?
+- PseudoCode 1 would be easier to update, because the chances of encountering errors and bugs are lesser than the other when adding new features
+
+4. Testability
+Which algorithm is easier to test with different inputs? Why?
+- PseudoCode 1 is easier to test with different inputs, because it has lesser conditions and only has 1 loop.
+
+5. Security
+Imagine the input list comes from a user. What should the algorithm check to avoid errors or misuse?
+- The algorithm should check if the list is not empty and contains valid inputs to avoid errors and misuse.
+
+6. Final Answer
+Based on your answers from 1 to 5, which one is the better algorithm that you will use to solve the problem of finding the highest number? Why? Summarize your answer
+- The better algorithm is PseudoCode 1, since it is concise, clear, faster, and overall more understandable than PsuedoCode 2.
