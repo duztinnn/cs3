@@ -8,12 +8,23 @@ class Car:
         s = distance / 25
         self.battery = self.battery - s
         print("You traveled",distance, "km")
-        print("You have",self.battery, "wH left")
+        print("Your",self.brand,self.model,"has",self.battery, "wH left")
     def charge(self, wH):
         self.battery = self.battery + wH
         print("You charged",wH, "wH")
-        print("You have",self.battery, "wH left")
-        
-myCar = Car("BYD","Seal 5")
-myCar.go(100)
-myCar.charge(1)
+        print("Your",self.brand,self.model,"has",self.battery, "wH left")
+
+brand = input("What is the brand of your car? ")
+model = input("What is the model of your car? ")
+myCar = Car(brand,model)
+while myCar.battery>0:
+    command = input("What do you want to do? (go, charge) ")
+    if command == "go":
+        distance = int(input("How far? "))
+        myCar.go(distance)
+    elif command == "charge":
+        wH = int(input("How much? "))
+        myCar.charge(wH)
+    else:
+        print("Invalid command")
+print("Your car ran out of battery !")
