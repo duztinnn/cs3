@@ -1,0 +1,93 @@
+Annex A
+<br> Computational Thinking Exercise "Smart School Canteen Queue"
+
+Section: 9 - Arayat
+
+#13 / Sevilla, Hyrall Adar B.
+#14 / Sotto, Duztin Azriel S.
+#15 / Tapao, Aaron Gener J.
+
+Score _______
+
+Date: August 12, 2026
+
+Step 1: Identify the Big Problem
+
+Main Problem: The PSHS school canteen experiences long lines and slow service during busy lunch hours. This happens because of inefficient ordering, manual payment processes, and the absence of real-time inventory tracking.
+
+
+Step 2: Identify three to four Sub-Problems
+Please list possible sub-problems:
+
+1. Students take too long to decide what to order.
+
+2. Cashiers spend too much time calculating order totals and counting change.
+
+3. Lack of real-time inventory tracker in case of shortages.
+
+
+Step 3: Define Computational Thinking Approaches 
+  
+| Sub-Problem | CT Skills | Example Solution |
+| :--- | :--- | :--- |
+| 1. Ordering delays | Abstraction | Create a digital menu board and only include the item's name, price, and availability. |
+| 2. Manual Payment | Algorithmic Thinking | Implement a Point-of-Sale system where the cashier clicks item buttons and the system automatically calculates the total and the required change. |
+| 3. Lack of Inventory Tracking. | Pattern Recognition | Develop a digital inventory system that automatically subtracts items upon sale and alerts staff when item stocks are running low |
+
+
+Step 4: 
+
+BEGIN
+
+DEFINE CLASS MenuItem
+    ATTRIBUTES:
+        name
+        price
+        isAvailable
+    
+    METHODS:
+        display(name, price, status)
+        updateAvailability(status)
+END CLASS
+
+menuList = [
+    MenuItem("Burger", 120.00, true),
+    MenuItem("Fries", 60.00, true),
+    MenuItem("Iced Tea", 45.00, false),
+    MenuItem("Chicken", 150.00, true)
+]
+
+FUNCTION showMenuBoard(menuList)
+    PRINT "====== DIGITAL MENU BOARD ======"
+    FOR EACH item IN menuList DO
+        IF item.isAvailable == true THEN
+            status = "Available"
+        ELSE
+            status = "Sold Out"
+        END IF
+        PRINT item.name + " | Php " + item.price + " | " + status
+    END FOR
+END FUNCTION
+
+FUNCTION placeOrder(menuList, itemName)
+    FOR EACH item IN menuList DO
+        IF item.name == itemName THEN
+            IF item.isAvailable == true THEN
+                PRINT "Order confirmed: " + item.name + " - Php " + item.price
+                RETURN true
+            ELSE
+                PRINT "Sorry, " + item.name + " is currently Sold Out"
+                RETURN false
+            END IF
+        END IF
+    END FOR
+    PRINT "Item not found on the menu"
+    RETURN false
+END FUNCTION
+
+CALL showMenuBoard(menuList)
+
+userChoice = INPUT "Enter the name of the item you want to order: "
+CALL placeOrder(menuList, userChoice)
+
+END
